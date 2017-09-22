@@ -1,7 +1,7 @@
 { fetchgit, fetchFromGitHub, bootPkgs }:
 
 bootPkgs.callPackage ./base.nix {
-  version = "0.2.020170323";
+  version = "0.2.020170919";
 
   inherit bootPkgs;
 
@@ -10,15 +10,15 @@ bootPkgs.callPackage ./base.nix {
     # when https://github.com/ghcjs/ghcjs/pull/573 is merged.
     owner = "k0001";
     repo = "ghcjs";
-    rev = "600015e085a28da601b65a41c513d4a458fcd184";
-    sha256 = "01kirrg0fnfwhllvwgfqjiwzwj4yv4lyig87x61n9jp6y5shzjdx";
+    rev = "eb8670c4b03b4a0ff5dd7ac3f524b410b37051ea";
+    sha256 = "13s8wz9gk82cpwskc7ic3fvcpy572g87ny4icmj1apfzrrcpdp1v";
   };
   ghcjsBootSrc = fetchgit {
     # TODO: switch back to git://github.com/ghcjs/ghcjs-boot.git
     # when https://github.com/ghcjs/ghcjs-boot/pull/41 is merged.
-    url = git://github.com/basvandijk/ghcjs-boot.git;
-    rev = "19a3b157ecb807c2224daffda5baecc92b76af35";
-    sha256 = "16sgr8vfr1nx5ljnk8gckgjk70zpa67ix4dbr9aizkwyz41ilfrb";
+    url = git://github.com/cocreature/ghcjs-boot.git;
+    rev = "8020b2a9be585e958050c0a2c9144961bc8fad38";
+    sha256 = "1n6xmcn6dwp1lsalyr84gqbx41qycisx5dxdxmw4wdh0v2pclqrq";
     fetchSubmodules = true;
   };
 
